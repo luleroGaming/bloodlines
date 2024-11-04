@@ -1,4 +1,4 @@
-let gold = 10;
+let gold = generators[0].cost; // Initialiser l'or au coût du premier générateur
 let goldPerSecond = 0;
 let generators = [
     { cost: 10, income: 1, owned: 0 },
@@ -17,7 +17,7 @@ function buyGenerator(index) {
         gold -= generator.cost;
         generator.owned += 1;
         goldPerSecond += generator.income;
-        generator.cost = Math.floor(generator.cost * 1.15); // Augmenter le coût
+        generator.cost = Math.floor(generator.cost * 1.15); // Augmenter le coût du générateur après chaque achat
         updateDisplay();
     }
 }
@@ -31,7 +31,7 @@ function prestige() {
 }
 
 function resetGame() {
-    gold = 0;
+    gold = generators[0].cost; // Réinitialiser l'or pour pouvoir racheter le générateur le moins cher
     goldPerSecond = 0;
     generators.forEach(generator => {
         generator.owned = 0;
@@ -45,4 +45,6 @@ function gameLoop() {
     updateDisplay();
 }
 
+// Lancer une première mise à jour de l'affichage et la boucle du jeu
+updateDisplay();
 setInterval(gameLoop, 1000);
