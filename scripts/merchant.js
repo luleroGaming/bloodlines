@@ -1,10 +1,10 @@
-let gold = generators[0].cost; // Initialiser l'or au coût du premier générateur
-let goldPerSecond = 0;
 let generators = [
     { cost: 10, income: 1, owned: 0 },
-    { cost: 100, income: 10, owned: 0 },
-    { cost: 1000, income: 100, owned: 0 }
+    { cost: 1000, income: 100, owned: 0 },
+    { cost: 100000, income: 1000, owned: 0 }
 ];
+let gold = generators[0].cost; // Initialiser l'or au coût du premier générateur
+let goldPerSecond = 0;
 let prestigePoints = JSON.parse(localStorage.getItem('prestigePoints')) || { wealth: 0 };
 
 function updateDisplay() {
