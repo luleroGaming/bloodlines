@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Marchand - Bloodlines</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div id="merchant-game">
+        <h1>Vie de Marchand</h1>
+        <div id="gold-display">Or : <span id="gold">0</span></div>
+        
+        <!-- Générateurs d'or -->
+        <div id="generators">
+            <button class="generator" onclick="buyGenerator(0)">Boutique (+1 or/sec) - 10 or</button>
+            <button class="generator" onclick="buyGenerator(1)">Échoppe (+10 or/sec) - 100 or</button>
+            <button class="generator" onclick="buyGenerator(2)">Compagnie Marchande (+100 or/sec) - 1000 or</button>
+        </div>
+
+        <button id="prestige" onclick="prestige()">Prestige - Gagnez des points de richesse</button>
+    </div>
+    <script src="../scripts/merchant.js"></script>
+</body>
+</html>
