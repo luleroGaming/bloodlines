@@ -1,4 +1,4 @@
-let gold = 1;
+let gold = 10;
 let goldPerSecond = 0;
 let generators = [
     { cost: 10, income: 1, owned: 0 },
